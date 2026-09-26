@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2b2b2b;
+  padding: 16px 32px;
+  position: relative;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* El checkbox real queda oculto, pero sigue siendo funcional
+   (accesible por teclado a través del label asociado) */
+.menu-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu-icono {
+  display: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* --- Comportamiento responsivo --- */
+@media (max-width: 768px) {
+  .menu-icono {
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #2b2b2b;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-links li {
+    padding: 12px 32px;
+  }
+
+  /* El truco: cuando el checkbox está :checked, el selector ~
+     selecciona a .nav-links (hermano posterior de .menu-toggle
+     dentro del mismo <nav>) y le cambia el max-height */
+  .menu-toggle:checked ~ .nav-links {
+    max-height: 300px;
+  }
+}

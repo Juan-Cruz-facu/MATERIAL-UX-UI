@@ -1,0 +1,31 @@
+/* Selector de ID */
+#destacado {
+  background-color: #eef6f1;
+  padding: 10px;
+  border: 1px solid #7fae94;
+}
+
+/* Selector de clase */
+.card {
+  background-color: #fdf6ec;
+  margin-bottom: 10px;
+  padding: 12px;
+}
+
+/* Selector descendiente: p dentro de .card */
+.card p {
+  color: #5c4630;
+  font-style: italic;
+}
+
+/* Selector de clase sobre elemento distinto */
+.destacado-texto {
+  font-weight: bold;
+  color: #a3402d;
+}
+
+/* Selector de etiqueta (span) */
+span {
+  background-color: #ffe680;
+  padding: 0 4px;
+}

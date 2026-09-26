@@ -1,0 +1,221 @@
+/* ============ VARIABLES ============ */
+:root {
+  --color-primario: #2b2b2b;
+  --color-secundario: #7fae94;
+  --color-acento: #a3402d;
+  --color-fondo: #f4f1ea;
+  --espaciado: 16px;
+  --radio-borde: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* scroll suave al clickear los links del navbar */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--color-primario);
+  background-color: var(--color-fondo);
+}
+
+/* ============ NAVBAR ============ */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-primario);
+  padding: var(--espaciado) 32px;
+  z-index: 100;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ============ HERO ============ */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://via.placeholder.com/1200x800');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.hero-contenido h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--espaciado);
+  animation: aparecer 0.8s ease-out;
+}
+
+.hero-contenido p {
+  margin-bottom: var(--espaciado);
+}
+
+.btn-cta {
+  display: inline-block;
+  background-color: var(--color-secundario);
+  color: white;
+  padding: 12px 24px;
+  border-radius: var(--radio-borde);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: var(--color-acento);
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============ SERVICIOS (Grid) ============ */
+.servicios {
+  padding: 64px 32px;
+  text-align: center;
+}
+
+.servicios h2 {
+  margin-bottom: 32px;
+}
+
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--espaciado);
+}
+
+.servicio-card {
+  background-color: white;
+  padding: 24px;
+  border-radius: var(--radio-borde);
+  border: 1px solid var(--color-secundario);
+}
+
+/* ============ TESTIMONIOS (Carrusel con scroll-snap) ============ */
+.testimonios {
+  padding: 64px 32px;
+  text-align: center;
+}
+
+.carrusel {
+  display: flex;
+  gap: var(--espaciado);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: var(--espaciado);
+}
+
+.testimonio-card {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+  background-color: white;
+  padding: 24px;
+  border-radius: var(--radio-borde);
+  border: 1px solid #ccc;
+}
+
+.testimonio-card span {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+  color: var(--color-secundario);
+}
+
+/* ============ CONTACTO (Flexbox) ============ */
+.contacto {
+  padding: 64px 32px;
+  text-align: center;
+}
+
+.form-contacto {
+  max-width: 400px;
+  margin: 32px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: var(--radio-borde);
+  font-family: inherit;
+}
+
+.form-contacto button {
+  padding: 12px;
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  border-radius: var(--radio-borde);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-contacto button:hover {
+  background-color: var(--color-acento);
+}
+
+/* ============ FOOTER ============ */
+.footer {
+  background-color: var(--color-primario);
+  color: white;
+  text-align: center;
+  padding: var(--espaciado);
+}
+
+/* ============ MEDIA QUERIES ============ */
+@media (max-width: 768px) {
+  .hero-contenido h1 {
+    font-size: 1.8rem;
+  }
+
+  .nav-links {
+    gap: 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .hero {
+    height: 80vh;
+  }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 20 - Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">MiMarca</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-contenido">
+        <h1>Soluciones digitales para tu negocio</h1>
+        <p>Diseño, desarrollo y estrategia en un solo lugar.</p>
+        <a href="#contacto" class="btn-cta">Contactanos</a>
+      </div>
+    </section>
+
+    <section id="servicios" class="servicios">
+      <h2>Nuestros servicios</h2>
+      <div class="grid-servicios">
+        <div class="servicio-card">
+          <h3>Diseño UX/UI</h3>
+          <p>Interfaces claras, accesibles y centradas en el usuario.</p>
+        </div>
+        <div class="servicio-card">
+          <h3>Desarrollo Web</h3>
+          <p>Sitios rápidos, responsivos y mantenibles.</p>
+        </div>
+        <div class="servicio-card">
+          <h3>Consultoría</h3>
+          <p>Estrategia digital adaptada a tu negocio.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonios" class="testimonios">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <div class="carrusel">
+        <div class="testimonio-card">
+          <p>"Excelente trabajo, superaron nuestras expectativas."</p>
+          <span>— Cliente A</span>
+        </div>
+        <div class="testimonio-card">
+          <p>"Muy profesionales y atentos a los detalles."</p>
+          <span>— Cliente B</span>
+        </div>
+        <div class="testimonio-card">
+          <p>"El sitio quedó increíble, rápido y responsivo."</p>
+          <span>— Cliente C</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <h2>Contactanos</h2>
+      <form class="form-contacto">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 MiMarca. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

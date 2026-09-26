@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 19 - Formulario multi-step</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Registro (2 pasos)</h1>
+
+  <form class="form-multistep">
+    <!-- Radios ocultos que controlan qué paso se muestra -->
+    <input type="radio" name="paso" id="ir-paso1" class="control-paso" checked>
+    <input type="radio" name="paso" id="ir-paso2" class="control-paso">
+
+    <!-- Paso 1 -->
+    <section class="paso paso1">
+      <h2>Paso 1: Datos personales</h2>
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required minlength="2">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <label for="ir-paso2" class="btn-siguiente">Siguiente →</label>
+    </section>
+
+    <!-- Paso 2 -->
+    <section class="paso paso2">
+      <h2>Paso 2: Cuenta</h2>
+
+      <label for="usuario">Usuario:</label>
+      <input type="text" id="usuario" required minlength="4">
+
+      <label for="password">Contraseña (mín. 6 caracteres):</label>
+      <input type="password" id="password" required minlength="6">
+
+      <label for="ir-paso1" class="btn-atras">← Atrás</label>
+      <button type="submit">Registrarme</button>
+    </section>
+  </form>
+</body>
+</html>

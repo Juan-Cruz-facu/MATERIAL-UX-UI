@@ -1,0 +1,57 @@
+:root {
+  --color-primario: #2b2b2b;
+  --color-secundario: #7fae94;
+  --color-fondo: #f4f1ea;
+  --color-texto: #2b2b2b;
+  --espaciado: 16px;
+  --radio-borde: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.pagina {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  min-height: 100vh;
+  padding: var(--espaciado);
+}
+
+.header {
+  background-color: var(--color-primario);
+  color: white;
+  padding: var(--espaciado);
+  border-radius: var(--radio-borde);
+}
+
+.card {
+  background-color: white;
+  padding: calc(var(--espaciado) * 1.5);
+  margin-top: var(--espaciado);
+  border-radius: var(--radio-borde);
+  border: 1px solid var(--color-secundario);
+}
+
+.btn,
+.btn-tema {
+  background-color: var(--color-secundario);
+  color: white;
+  border: none;
+  padding: 10px var(--espaciado);
+  border-radius: var(--radio-borde);
+  cursor: pointer;
+  margin-top: var(--espaciado);
+}
+
+/* "Modo oscuro" simple: redefine las variables dentro de este contexto */
+.modo-oscuro {
+  --color-fondo: #1a1a1a;
+  --color-texto: #f4f1ea;
+  --color-primario: #000000;
+}

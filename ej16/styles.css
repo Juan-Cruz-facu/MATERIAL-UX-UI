@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* --- Spinner --- */
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #eef6f1;
+  border-top: 6px solid #7fae94;
+  border-radius: 50%;
+  animation-name: girar;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* --- Tarjeta fade-in + slide-up --- */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fdf6ec;
+  border-radius: 8px;
+  width: 300px;
+  animation-name: aparecer;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}

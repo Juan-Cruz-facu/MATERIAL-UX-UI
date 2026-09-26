@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 3 - Tabla de datos</title>
+</head>
+<body>
+  <h1>Horario semanal de clases</h1>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Hora</th>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miércoles</th>
+        <th>Jueves</th>
+        <th>Viernes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>8:00 - 10:00</td>
+        <td>Ingeniería de Software I</td>
+        <td>Matemática Discreta</td>
+        <td>Ingeniería de Software I</td>
+        <td>Matemática Discreta</td>
+        <td rowspan="2">Estudio libre</td>
+      </tr>
+      <tr>
+        <td>10:00 - 12:00</td>
+        <td>Programación Orientada a Objetos</td>
+        <td>Algoritmos y Estructuras de Datos</td>
+        <td>Programación Orientada a Objetos</td>
+        <td>Algoritmos y Estructuras de Datos</td>
+      </tr>
+      <tr>
+        <td>12:00 - 14:00</td>
+        <td colspan="5">Receso de mediodía</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="6">Horario sujeto a modificaciones según el cuatrimestre.</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>
