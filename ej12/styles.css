@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Botón fijo */
+.btn-volver-arriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2b2b2b;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  z-index: 100;
+}
+
+/* Contenedor del tooltip: necesita relative para que el tooltip
+   (absolute) se posicione respecto a él y no respecto a toda la página */
+.tooltip-contenedor {
+  position: relative;
+  border-bottom: 1px dotted #2b2b2b;
+  cursor: help;
+}
+
+/* Tooltip oculto por defecto */
+.tooltip-texto {
+  visibility: hidden;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2b2b2b;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+/* Se muestra al hacer hover sobre el contenedor */
+.tooltip-contenedor:hover .tooltip-texto {
+  visibility: visible;
+}

@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Enfoque: Desktop first. Se definen los estilos base para pantallas
+   grandes, y las media queries van "achicando" el layout hacia abajo.
+   Se eligió así porque el layout de referencia (Ejercicio 10) ya
+   estaba pensado como diseño de escritorio con sidebar fijo. */
+
+.layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header  header"
+    "sidebar contenido"
+    "footer  footer";
+  min-height: 100vh;
+  gap: 10px;
+}
+
+.header {
+  grid-area: header;
+  background-color: #2b2b2b;
+  color: white;
+  padding: 16px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #eef6f1;
+  padding: 16px;
+}
+
+.contenido {
+  grid-area: contenido;
+  padding: 16px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #2b2b2b;
+  color: white;
+  padding: 16px;
+  text-align: center;
+}
+
+/* Breakpoint 1: tablets (menor a 768px) — el sidebar desaparece
+   y el grid pasa a una sola columna */
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "contenido"
+      "footer";
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+/* Breakpoint 2: pantallas muy chicas (celulares) — se reduce
+   el padding general para aprovechar mejor el espacio */
+@media (max-width: 480px) {
+  .header,
+  .contenido,
+  .footer {
+    padding: 8px;
+  }
+}
